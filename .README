@@ -1,0 +1,74 @@
+# Image Resizing API
+
+## Project Setup
+
+To get started, first install the necessary dependencies:
+
+```
+npm install
+```
+
+### Development Server
+
+Run the following command to start the server for development:
+
+```
+npm run dev
+```
+
+### Production Build
+
+For production deployment, compile and minify the code using:
+
+```
+npm run build
+```
+
+Once built, start the server in production mode:
+
+```
+npm run start
+```
+
+### Unit Tests
+
+Execute unit tests with:
+
+```
+npm run test
+```
+
+### Code Formatting and Linting
+
+Ensure code consistency and formatting standards are met using:
+
+```
+npm run format
+```
+
+```
+npm run lint
+```
+
+To automatically fix linting issues:
+
+```
+npm run lint:fix
+```
+
+## API Reference
+
+Endpoint to create a thumbnail version of an image:
+
+```GET /api/images/?filename={IMAGE_NAME}&width={WIDTH}&height={HEIGHT}```
+
+### Parameters
+
+| Name      | Type    | Required | Description                                 |
+|-----------|---------|----------|---------------------------------------------|
+| filename  | String  | true     | Name of the image to be resized             |
+| width     | Integer | true     | Desired width of the image                  |
+| height    | Integer | true     | Desired height of the image                 |
+
+### Example
+```http://localhost:8082/api/images/?filename=fjord&width=200&height=200 ```
